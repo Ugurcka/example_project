@@ -1,0 +1,8 @@
+<h1 *ngIf="(tracklist$ | async) == null">
+  Loading...
+</h1>
+<li *ngFor="let item of tracklist$ | async">
+  <p>id: {{ item.id }}</p>
+  <p>user: {{ item.user }}</p>
+  <p>remained: {{ item.remained }} seconds</p>
+</li>
